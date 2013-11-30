@@ -23,7 +23,7 @@ public class AnnotatedServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		LOG.debug("AnnotatedServlet.doGet({}, {})", request, response);
-		response.getWriter().println("<" + this.getClass().getName() + "/>");
+		response.getWriter().println(this.getClass().getName() + ".doGet()");
 	}
 
 }

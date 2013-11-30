@@ -16,24 +16,24 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @WebFilter(AnnotatedServlet.SERVLET_MAPPING)
-public class AnnotatedFilter implements Filter {
+public class AnnotatedSecondFilter implements Filter {
 
 	private static final Logger LOG = LoggerFactory.getLogger(AnnotatedFilter.class);
 
 	@Override
 	public void init(FilterConfig config) throws ServletException {
-		LOG.debug("AnnotatedFilter.init({})", config);
+		LOG.debug("AnnotatedSecondFilter.init({})", config);
 	}
 
 	@Override
 	public void destroy() {
-		LOG.debug("AnnotatedFilter.destroy()");
+		LOG.debug("AnnotatedSecondFilter.destroy()");
 	}
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException,
 			ServletException {
-		LOG.debug("AnnotatedFilter.doFilter({}, {}, {})", request, response, chain);
+		LOG.debug("AnnotatedSecondFilter.doFilter({}, {}, {})", request, response, chain);
 		response.getWriter().println(this.getClass().getName());
 		chain.doFilter(request, response);
 		response.getWriter().println(this.getClass().getName());
