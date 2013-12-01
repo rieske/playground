@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 @WebFilter(AnnotatedServlet.SERVLET_MAPPING)
 public class AnnotatedThirdFilter implements Filter {
 
-	private static final Logger LOG = LoggerFactory.getLogger(AnnotatedFilter.class);
+	private static final Logger LOG = LoggerFactory.getLogger(AnnotatedThirdFilter.class);
 
 	@Override
 	public void init(FilterConfig config) throws ServletException {
