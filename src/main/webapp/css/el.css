@@ -1,0 +1,8 @@
+.el-name {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.el-value {
+	display: none;
+}

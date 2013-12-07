@@ -1,6 +1,25 @@
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
+	
+
+	<context-param>
+		<param-name>contextParam</param-name>
+		<param-value>contextParamValue</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>el-servlet</servlet-name>
+		<jsp-file>/content/el.jsp</jsp-file>
+		<init-param>
+			<param-name>jspInitParam</param-name>
+			<param-value>jspInitParamValue</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>el-servlet</servlet-name>
+		<url-pattern>/content/el.jsp</url-pattern>
+	</servlet-mapping>
 
 	<jsp-config>
 		<jsp-property-group>
