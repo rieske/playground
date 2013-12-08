@@ -24,6 +24,9 @@ public class AnnotatedServletContextListener implements ServletContextListener {
 		LOG.debug("AnnotatedServletContextListener.contextInitialized({})", servletContextEvent);
 		ExecutorService executorService = Executors.newScheduledThreadPool(THREAD_POOL_SIZE);
 		servletContextEvent.getServletContext().setAttribute(ATTR_EXECUTOR_SERVICE, executorService);
+
+		LOG.debug("servletContext.getInitParameter(\"contextParam\"): {}", servletContextEvent.getServletContext().getInitParameter("contextParam"));
+		LOG.debug("servletContext.getAttribute(\"contextParam\"): {}", servletContextEvent.getServletContext().getAttribute("contextParam"));
 	}
 
 	@Override
